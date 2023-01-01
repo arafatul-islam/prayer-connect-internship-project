@@ -37,7 +37,7 @@ const Process = ({ todo }) => {
         name="todo"
         style={
           todoProcess
-            ? { backgroundColor: "red" }
+            ? { backgroundColor: "red", color: "white" }
             : { backgroundColor: "white" }
         }
         onClick={(e) => {
@@ -50,20 +50,22 @@ const Process = ({ todo }) => {
       <button
         name="inProgress"
         style={
-          inProcess ? { backgroundColor: "red" } : { backgroundColor: "white" }
+          inProcess
+            ? { backgroundColor: "red", color: "white" }
+            : { backgroundColor: "white" }
         }
         onClick={(e) => {
           processChanger(e, todo._id);
           update(todo._id);
         }}
       >
-        inProcess
+        inProgress
       </button>
       <button
         name="done"
         style={
           doneProcess
-            ? { backgroundColor: "red" }
+            ? { backgroundColor: "red", color: "white" }
             : { backgroundColor: "white" }
         }
         onClick={(e) => {
