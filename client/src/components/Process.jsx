@@ -32,7 +32,12 @@ const Process = ({ todo }) => {
   };
 
   return (
-    <div className="options">
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+      }}
+    >
       <button
         name="todo"
         style={

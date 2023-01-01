@@ -19,24 +19,49 @@ const CreateTodo = () => {
     }
   };
   return (
-    <form onSubmit={createTodo}>
-      <div>
+    <form
+      onSubmit={createTodo}
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        margin: "10px 0",
+      }}
+    >
+      <div
+        style={{
+          width: "50%",
+          display: "flex",
+          justifyContent: "space-around",
+          alignItems: "center",
+        }}
+      >
+        <label>Title:</label>
         <input
           placeholder="todo"
           name="title"
           value={title}
           onChange={(e) => setTile(() => e.target.value)}
-          style={{ padding: "10px", outline: "none" }}
+          style={{ padding: "10px", outline: "none", width: "50%" }}
         />
+        <label>Description: </label>
         <input
           placeholder="todo description"
           name="description"
           value={desc}
           onChange={(e) => setDesc(() => e.target.value)}
-          style={{ padding: "10px", outline: "none" }}
+          style={{ padding: "10px", outline: "none", width: "50%" }}
         />
       </div>
-      <button>create todo</button>
+      <button
+        style={{
+          marginLeft: "10px",
+          padding: "8px",
+          textTransform: "capitalize",
+        }}
+      >
+        create todo
+      </button>
     </form>
   );
 };
